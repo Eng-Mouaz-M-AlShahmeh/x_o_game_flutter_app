@@ -63,10 +63,16 @@ class _MyHomePageState extends State<MyHomePage> {
     if(_isStopGame == true) {
       return;
     }
+
+    if(_buttons[index] != '') {
+      return;
+    }
+
     setState(() {
       _buttons[index] = val;
       _isORole = !_isORole;
     });
+
     _checkWinner();
 
     if(_isORole == true) {
